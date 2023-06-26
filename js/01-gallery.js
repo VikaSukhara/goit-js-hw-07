@@ -43,6 +43,7 @@ function handleClick(event) {
       }
     }
     document.addEventListener("keydown", modalEsc);
+    document.removeEventListener("keydown", modalEsc);
   }
 }
 

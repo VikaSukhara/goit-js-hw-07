@@ -20,14 +20,19 @@ const galleryList = galleryItems
 const galleryEl = document.querySelector(".gallery");
 galleryEl.insertAdjacentHTML("beforeend", galleryList);
 
+const lightbox = new SimpleLightbox(".gallery a", {
+  captionsData: `alt`,
+  captionDelay: 250
+});
 
-galleryEl.addEventListener("click", handleClick);
-function handleClick(event) {
-  event.preventDefault();
-  if (event.target.classList.contains("js__img")) {
-    const lightbox = new SimpleLightbox(".gallery a", {
-      captionsData: `alt`,
-      captionDelay: 250,
-    });
-  }
-}
+
+
+// galleryEl.addEventListener("click", handleClick);
+// function handleClick(event) {
+//   event.preventDefault();
+//   if (event.target.classList.contains("js__img")) {
+   
+//   }
+// }
+
+
